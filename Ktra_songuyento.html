@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ham kiem tra so nguyen to</title>
+</head>
+<body>
+	<script>
+		function isPrime(numbers) {
+			if (numbers < 2) {
+				return false;
+			} if (numbers === 2) {
+				return true;
+			} else if (numbers >= 3) {
+				for (let i=2; i<numbers; i++) {
+					if (numbers%i==0) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}
+
+		function demo() {
+			for (let j=0; j<=100; j++) {
+				if(isPrime(j)) {
+					console.log(j);
+				}
+			}
+		}
+
+		demo();
+	</script>
+</body>
+</html>
